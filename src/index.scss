@@ -1,0 +1,105 @@
+@import "./reset.css";
+
+:root {
+    --card-colour: #9f9f9f;
+  }
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    & .card{
+        margin: 20px;
+        width: 500px;   
+        height: 800px;
+        border: 5px solid var(--card-colour);
+        box-shadow: 15px 15px 20px black;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        & .card-components {
+            height: 100%;
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-evenly;
+            
+            & div {
+                margin: 10px;
+            }
+
+            & .img-container{
+                background-image: url(./assets/ZeZ5I5h-_400x400.jpg);
+                background-size: cover;
+                border-radius: 15%;
+                width: 150px;
+                height:150px;
+                position: relative;
+
+                & .img-point{
+                    position: absolute;
+                    left: 80%;
+                    bottom: 80%;
+                    width: 20%;
+                    height:20%;
+                    background-color: #09c809;
+                    border-radius: 50%;
+                    border-width: 3px;
+                    border-color: #ffffff;
+                    border-style: solid;
+                }
+            }
+            
+            & .text-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                
+                & p {
+                    font-size: 25px;
+                    margin: 5px;
+                }
+            }
+
+            & .button-container{
+                margin-top: 20px;
+                width: 260px;
+                height: 50px;
+                border: 3px solid rgba(62, 59, 59, 0.488);
+                border-radius: 20px;
+                box-shadow: 15px 15px 45px rgba(174, 169, 169, 0.507);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #ffffff;
+                background-color: rgba(11, 11, 234, 0.77);
+            }
+
+
+            & .follower-container{
+                
+                background-color: grey;
+                margin: 5px;
+                width: 80px;
+                height: 40px;
+                justify-content: center;
+            }
+        }
+    }
+
+    & .card .card-components:nth-child(3){
+        flex-direction: row;
+    }
+    
+    
+}
+
