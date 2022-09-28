@@ -30,14 +30,14 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            justify-content: space-evenly;
+            justify-content: space-around;
             
             & div {
                 margin: 10px;
             }
 
             & .img-container{
-                background-image: url(./assets/ZeZ5I5h-_400x400.jpg);
+                background-image: url("img/ZeZ5I5h-_400x400.jpg");
                 background-size: cover;
                 border-radius: 15%;
                 width: 150px;
@@ -64,9 +64,15 @@
                 align-items: center;
                 flex-direction: column;
                 
-                & p {
-                    font-size: 25px;
-                    margin: 5px;
+                & p  {
+                    font-size: 20px;
+                    color: #808080;
+                    letter-spacing: 1px;
+                    & strong {
+                        font-size: 30px;
+                        letter-spacing: -1px;
+                        color: #000000;
+                    }
                 }
             }
 
@@ -74,29 +80,49 @@
                 margin-top: 20px;
                 width: 260px;
                 height: 50px;
-                border: 3px solid rgba(62, 59, 59, 0.488);
-                border-radius: 20px;
-                box-shadow: 15px 15px 45px rgba(174, 169, 169, 0.507);
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                color: #ffffff;
-                background-color: rgba(11, 11, 234, 0.77);
+
+                background-color: #0b0beac4;
+                border: 3px solid #3e3b3b7c;
+                border-radius: 20px;
+                box-shadow: 15px 15px 45px #aea9a981;
+
+                & p {
+                    margin-left: 10px;
+                    color: #ffffff;
+                    font-size: 20px;
+                    letter-spacing: 2px;
+                }
+
+
             }
 
 
             & .follower-container{
-                
-                background-color: grey;
-                margin: 5px;
-                width: 80px;
-                height: 40px;
+
+                display: flex;
                 justify-content: center;
+                flex-direction: column;
+                text-align: center;
+
+                & p  {
+                    font-size: 20px;
+                    color: #808080;
+                    letter-spacing: 1px;
+                    & strong {
+                        font-size: 30px;
+                        letter-spacing: -1px;
+                        color: #000000;
+                    }
+                }
             }
         }
     }
 
     & .card .card-components:nth-child(3){
+        height: 60%;
         flex-direction: row;
     }
     
