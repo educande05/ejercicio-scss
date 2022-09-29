@@ -1,7 +1,18 @@
 @import "./reset.css";
 
 :root {
-    --card-colour: #9f9f9f;
+    --card-color: #ffffff;
+    --card-border-color: #9f9f9f;
+
+    --font-color: #000000;
+    --sub-font-color: #808080;
+    --reverse-font-color: #ffffff;
+    --img-point-color: #09c809;
+    --follow-me-button: #0b0beac4;
+
+    --card-width: 500px;
+    --card-height: 800px;
+
   }
 
 .container {
@@ -12,9 +23,10 @@
 
     & .card{
         margin: 20px;
-        width: 500px;   
-        height: 800px;
-        border: 5px solid var(--card-colour);
+        width: var(--card-width);   
+        height: var(--card-height);
+        background-color: var(--card-color);
+        border: 5px solid var(--card-border-color);
         box-shadow: 15px 15px 20px black;
         border-radius: 10px;
         display: flex;
@@ -23,7 +35,7 @@
         flex-direction: column;
 
         & .card-components {
-            height: 100%;
+            height: 60%;
             width: 100%;
             padding: 10px;
             display: flex;
@@ -36,12 +48,23 @@
                 margin: 10px;
             }
 
+            & p  {
+                font-size: 150%;
+                color: var(--sub-font-color);
+                letter-spacing: 1px;
+                & strong {
+                    font-size: 150%;
+                    letter-spacing: -1px;
+                    color: var(--font-color);
+                }
+            }
+
             & .img-container{
-                background-image: url("img/ZeZ5I5h-_400x400.jpg");
+                background-image: url("img/gettyimages-1199242002.jpg");
                 background-size: cover;
                 border-radius: 15%;
-                width: 150px;
-                height:150px;
+                width: 40%;
+                height:70%;
                 position: relative;
 
                 & .img-point{
@@ -50,10 +73,10 @@
                     bottom: 80%;
                     width: 20%;
                     height:20%;
-                    background-color: #09c809;
+                    background-color: var(--img-point-color);
                     border-radius: 50%;
-                    border-width: 3px;
-                    border-color: #ffffff;
+                    border-width: 5px;
+                    border-color: var(--card-color);
                     border-style: solid;
                 }
             }
@@ -63,37 +86,31 @@
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                
-                & p  {
-                    font-size: 20px;
-                    color: #808080;
-                    letter-spacing: 1px;
-                    & strong {
-                        font-size: 30px;
-                        letter-spacing: -1px;
-                        color: #000000;
-                    }
-                }
             }
 
             & .button-container{
                 margin-top: 20px;
-                width: 260px;
-                height: 50px;
+                width: 50%;
+                height: 20%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
 
-                background-color: #0b0beac4;
+                background-color: var(--follow-me-button);
                 border: 3px solid #3e3b3b7c;
                 border-radius: 20px;
                 box-shadow: 15px 15px 45px #aea9a981;
 
                 & p {
                     margin-left: 10px;
-                    color: #ffffff;
-                    font-size: 20px;
+                    color: var(--reverse-font-color);
+                    font-size: 100%;
                     letter-spacing: 2px;
+
+                    & strong {
+                        letter-spacing: 2px;
+                        color: var(--reverse-font-color);
+                    }
                 }
 
 
@@ -106,17 +123,6 @@
                 justify-content: center;
                 flex-direction: column;
                 text-align: center;
-
-                & p  {
-                    font-size: 20px;
-                    color: #808080;
-                    letter-spacing: 1px;
-                    & strong {
-                        font-size: 30px;
-                        letter-spacing: -1px;
-                        color: #000000;
-                    }
-                }
             }
         }
     }
