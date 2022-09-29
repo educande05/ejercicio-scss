@@ -13,8 +13,23 @@
     --card-width: 500px;
     --card-height: 800px;
 
-  }
+    --button-pos-siz: 50px;
 
+} 
+.button-themes {
+    position: absolute;
+    width: var(--button-pos-siz);
+    height: var(--button-pos-siz);
+    left: calc(var(--button-pos-siz)/2) ;
+    top: calc(var(--button-pos-siz)/2);
+    z-index: 10; // Esto es para que funcione el hover, ya que si no se superpone.
+    background-color: #181820;
+    border: 2px solid #000000;
+    transition: 2s;  
+}
+.button-themes:hover{
+    background-color: #729098;
+}
 .container {
     display: flex;
     justify-content: center;
